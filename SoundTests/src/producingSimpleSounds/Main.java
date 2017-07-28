@@ -6,10 +6,8 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 
-
 public class Main {
 	
-
 	public static void main(String[] args) throws LineUnavailableException {
 		ArrayList<Sound> sounds = new ArrayList<Sound>();
 		
@@ -23,8 +21,6 @@ public class Main {
 		
 		Sound.playSounds(sounds);
 		
-		
-
 	}
 
 }

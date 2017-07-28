@@ -7,22 +7,21 @@ import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.SourceDataLine;
 
 public class Sound {
-	// Wieviele Samples werden pro Sekunde abgespielt?
-	// 44.1kHz(Musik CD) - 48kHz(Film) - 96kHz(Tonstudio)
+	// How many samples are played per second?
+	// 44.1kHz(Music CD) - 48kHz(Movie) - 96kHz(Studio)
 	final static float SAMPLERATE = 1000 * 96;
-	// Anzahl der Bits pro Sample
+	// Amount of bits per sample (2^Samplesize)
 	final static int SAMPLESIZE = 8;
 
 	final static int DEFAULTSOUNDLENGTH = 35000;
 	
+	// Notes
 	final static int Eh = 146;
 	final static int B = 195;
 	final static int G = 245;
 	final static int D = 328;
 	final static int A = 437;
 	final static int El = 560;
-	
-	
 
 	int[] samples;
 	int soundLength;
@@ -38,9 +37,8 @@ public class Sound {
 	}
 
 	/**
-	 * plays a sample (one or multiple pitches at once)
-	 * 
-	 * @param sample
+	 * plays a sound 
+	 * @param sounds list of sounds to be played
 	 * @throws LineUnavailableException
 	 */
 	static void playSounds(ArrayList<Sound> sounds) throws LineUnavailableException {
